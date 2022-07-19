@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#" id="form" novalidate>
+            <h1>Javascript Quiz</h1>
+            <p>Evaluez vos compétences en JavaScript en répondant aux questions que nous avons spécialement selectionnées pour vous. <br> c'est fun et c'est gratuit</p><br>
+            <label for="name">Nom</label><br>
+            <div class="input-control">
+                <input type="text" name="name" id="name" placeholder="  Joseph">
+                <div class="error-message"></div><br>
+            </div>
+            <label for="email" id="email-label">Email</label><br>
+            <div class="input-control">
+                <input type="email" name="email" id="email" placeholder="  Joseph@kinshasadigital.com">
+                <div class="error-message"></div><br>
+            </div>
+            <input type="submit" value="commencer" id="submit">
+        </form>
+    </div>
+    <div class="question-box hide">
+        <div class="question-header">
+            <div class="question"></div>
+            <div class="number">
+                <div class="question-number"></div>
+                <div class="time-left"></div>
+            </div>
+            <div class="containerprogress">
+                <div class="progress-bar" id="progressbar"></div>
+            </div>
+        </div>
+        <div class="question-body">
+            <div class="answer">
+                <input class="question-input" type="radio" id="question1" name="answer">
+                <label for="question1" id="answer1"></label><br>
+            </div>
+            <div class="answer">
+                <input class="question-input" type="radio" id="question2" name="answer">
+                <label for="question2" id="answer2"></label><br>
+            </div>
+            <div class="answer">
+                <input class="question-input" type="radio" id="question3" name="answer">
+                <label for="question3" id="answer3"></label><br>
+            </div>
+            <div class="answer">
+                <input class="question-input" type="radio" id="question4" name="answer">
+                <label for="question4" id="answer4"></label>
+            </div>
+        </div>
+        <div class="question-footer">
+            <input type="button" value="Quitter" id="quit">
+            <input type="button" value="Suivant" class="next" disabled>
+        </div>
+    </div>
+
+    <div class="result-box hide">
+        <div class="result-name"></div>
+        <div class="result-email"></div>
+        <div class="result-icone">
+        </div><br>
+        <div class="result">14/14</div><br>
+        <input type="button" value="Accueil" id="accueil-button">
+    </div>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
