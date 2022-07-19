@@ -35,10 +35,10 @@ const questions = [{
     {
         number: 4,
         question: "Quel selecteur utilisé pour selectionné un élement id du DOM en js",
-        answer: "document.getElementById",
+        answer: "document.getElementsById",
         options: [
             "document.takeElementById",
-            "document.getElementById",
+            "document.getElementsById",
             "document.catchElementById",
             "document.getId",
         ]
@@ -123,10 +123,10 @@ const questions = [{
     {
         number: 12,
         question: "Quelle méthode du DOM n'existe pas",
-        answer: "document.getElementByclasslist",
+        answer: "document.getElementByclass",
         options: [
             "document.querySelectorAll",
-            " document.querySelector",
+            "document.querySelector",
             "document.getElementByclass",
             "document.getElementsById"
         ]

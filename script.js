@@ -8,6 +8,7 @@ const label1 = document.querySelector('#answer1');
 const label2 = document.querySelector('#answer2');
 const label3 = document.querySelector('#answer3');
 const label4 = document.querySelector('#answer4');
+const input_container = document.querySelectorAll(".answer");
 const question = document.querySelector('.question');
 const question_number = document.querySelector('.question-number');
 const block1 = document.querySelectorAll('#question1');
@@ -25,13 +26,11 @@ let sec;
 let useranswer;
 let score;
 let questcompteur;
-
 form.addEventListener('submit', event => {
     event.preventDefault();
     myprogressebar();
     validateInputs();
     showQuestion(numero);
-    choice();
     numero = 0;
     questcompteur = 0;
     score = 0;
@@ -101,25 +100,8 @@ function showQuestion(index) {
 
 }
 
-function choice() {
-    for (let i = 0; i < 4; i++) {
-        if (label1.click) {
-            label1.setAttribute("onclick", "monscore(this)");
-        }
-        if (label2.click) {
-            label2.setAttribute("onclick", "monscore(this)");
-        }
-        if (label3.click) {
-            label3.setAttribute("onclick", "monscore(this)");
-        }
-        if (label4.click) {
-            label4.setAttribute("onclick", "monscore(this)");
-        }
-    }
-}
-
 function monscore(dutext) {
-    const affiche = dutext.textContent;
+    const affiche = dutext;
     const goodanswer = questions[numero].answer;
     if ((affiche === goodanswer) && (makechoice === false) && (mychoice === false)) {
         score += 1;
@@ -135,6 +117,17 @@ for (let i = 0; i < 4; i++) {
     input_answer[i].addEventListener("change", () => {
         btn_next.disabled = false;
         changecolor();
+        if (firstanwser.checked == true) {
+            monscore(questions[numero].options[0]);
+        } else if (secondtanwser.checked == true) {
+            monscore(questions[numero].options[1]);
+
+        } else if (thirdanwser.checked == true) {
+            monscore(questions[numero].options[2]);
+
+        } else if (fourthanwser.checked == true) {
+            monscore(questions[numero].options[3]);
+        }
         firstanwser.classList.add("decoration");
 
     })
