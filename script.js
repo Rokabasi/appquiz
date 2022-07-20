@@ -92,12 +92,6 @@ function showQuestion(index) {
     label2.textContent = questions[index].options[1];
     label3.textContent = questions[index].options[2];
     label4.textContent = questions[index].options[3];
-    // for (i = 0; i < 3; i++) {
-    //     option[i].setAttribute("onclick", "optionSelected(this)");
-    //     console.log(option)
-    // }
-
-
 }
 
 function monscore(dutext) {
