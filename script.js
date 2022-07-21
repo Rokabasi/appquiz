@@ -313,7 +313,7 @@ function uploadradio() {
 function myprogressebar() {
     sec = 60;
     const timesecond = document.querySelector('.time-left');
-    const timer = setInterval(() => {
+    setInterval(() => {
         timesecond.innerHTML = sec--;
         progressbar.style.width = `${(sec/60)*100}%`
         if (sec == -1) {
