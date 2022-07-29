@@ -117,7 +117,7 @@ body {
 }
 
 .containerprogress {
-    background-color: rgb(187, 194, 187);
+    background-color: #DDDDDD;
     margin-bottom: 6%;
     border-radius: 10px;
     width: 94%;
@@ -198,6 +198,10 @@ body {
     border: none;
     background-color: #0880D6;
     color: white;
+}
+
+.decoration {
+    border: solid 1px #028A3D;
 }
 
 .hide {
